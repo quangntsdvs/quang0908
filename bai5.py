@@ -1,9 +1,10 @@
-def giaithua(n):#tạo hàm giai thừa với biến n
-    if n == 0 or n ==1:#đặt điều kiện dừng
-        return 1#trả về 1 nếu n bằng 1 hoặc 0
+def giaithua(n): #hàm tên là giaithua nhận một tham số là n.
+    if n == 0 or n == 1: #Nếu n là 0 hoặc 1, hàm trả về 1. 
+        return 1 #Nếu n không phải là 0 hoặc 1, hàm chuyển sang trường hợp đệ quy. Nó trả về tích của n và giai thừa của n-1.
     else:
-        return n*giaithua(n-1)#nếu điều kiện chưa thõa trả vè giá trị: n*n-1
-    
-a = giaithua(4)#khai báo biến n đồng thời gán hàm giaithua cho biến a 
-print(f"giai thua cua {4} la : ")#in ra màn hình thông điệp và dùng f để nhúng giá trị 4 trực tiếp vào chuỗi 
-print(a)#in ra màn hình kết quả
+        return n * giaithua(n - 1) #Nếu n không phải là 0 hoặc 1, hàm chuyển sang trường hợp đệ quy. Nó trả về tích của n và giai thừa của n-1. 
+
+a = giaithua(8) #Dòng này gọi hàm giaithua với đối số là 8 và gán kết quả vào biến a. Nó tính giai thừa của 8.
+print(f"Giai thừa của {8} là: ") 
+print(a)
+#Lệnh in đầu tiên bao gồm giá trị đầu vào và lệnh in thứ hai in giai thừa đã tính toán.
